@@ -1,0 +1,24 @@
+{
+  "name": "taw-social-sharing",
+  "version": "0.1.0",
+  "description": "A simple jQuery plugin for displaying social media share buttons with counters.",
+  "main": "taw_social_sharing.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trvswgnr/taw-social-sharing"
+  },
+  "keywords": [
+    "social",
+    "sharing",
+    "counter",
+    "button"
+  ],
+  "author": "Travis A. Wagner",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-uglify": "^2.1.2",
+    "gulp-rename": "^1.2.2"
+  }
+}
