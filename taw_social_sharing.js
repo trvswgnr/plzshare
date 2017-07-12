@@ -14,7 +14,8 @@ var taw_social_sharing = (function ($) {
         }()),
         counters: true,
         margin: 0,
-        namespace: 'social-sharing'
+        namespace: 'social-sharing',
+        rounded: false
       }, settings),
 
       // set the namespace for all css classes
@@ -121,13 +122,14 @@ var taw_social_sharing = (function ($) {
 
       //full width if counters setting is false
       min_width = options.counters ? '50px' : '100%',
+      rounded = options.rounded ? 'border-radius: 5px;' : '',
       facebook_on = $.inArray("facebook", options.shares) !== -1 ? '' : 'display:none;',
       twitter_on = $.inArray("twitter", options.shares) !== -1 ? '' : 'display:none;',
       linkedin_on = $.inArray("linkedin", options.shares) !== -1 ? '' : 'display:none;',
       pinterest_on = $.inArray("pinterest", options.shares) !== -1 ? '' : 'display:none;';
 
     // add stylesheet to <head>
-    $('head').append('<style>.' + namespace + '{font-family:Helvetica Neue,sans-serif;margin-left:-8px;margin-right:-8px}.' + namespace + '__wrapper{overflow:hidden;width:100%;margin:' + options.margin + 'px auto;}.' + namespace + '__inner{width:100%;display:table;table-layout:fixed;height:48px;border-spacing:8px 0}.' + namespace + '__item-wrapper{position:relative;display:table-cell}.' + namespace + '__item-wrapper--facebook{' + facebook_on + 'background:#3b5998}.' + namespace + '__item-wrapper--facebook .' + namespace + '__item{background:#30497c}.' + namespace + '__item-wrapper--twitter{' + twitter_on + 'background:#1da1f2}.' + namespace + '__item-wrapper--twitter .' + namespace + '__item{background:#0d8ddc}.' + namespace + '__item-wrapper--linkedin{' + linkedin_on + 'background:#0077b5}.' + namespace + '__item-wrapper--linkedin .' + namespace + '__item{background:#005e8f}.' + namespace + '__item-wrapper--pinterest{' + pinterest_on + 'background:#bd081c}.' + namespace + '__item-wrapper--pinterest .' + namespace + '__item{background:#980617}.' + namespace + '__item-wrapper:hover .' + namespace + '__item{min-width:100%;-webkit-transition:.2s;transition:.2s}.' + namespace + '__item{color:#fff;font-size:24px;min-width:' + min_width + ';text-align:center;height:48px;line-height:45px;display:inline-block;background:rgba(0,0,0,.15);-webkit-transition:.2s;transition:.2s;position:absolute}.' + namespace + '__count{color:#fff;font-size:19px;text-decoration:none;float:right;padding:0 16px;line-height:48px}@media (max-width:580px){.' + namespace + '__item{width:100%}.' + namespace + '__count{display:none}}</style>');
+    $('head').append('<style>.' + namespace + '{font-family:Helvetica Neue,sans-serif;margin-left:-8px;margin-right:-8px}.' + namespace + '__wrapper{overflow:hidden;width:100%;margin:' + options.margin + 'px auto;}.' + namespace + '__inner{width:100%;display:table;table-layout:fixed;height:48px;border-spacing:8px 0}.' + namespace + '__item-wrapper{overflow:hidden;' + rounded + 'position:relative;display:table-cell}.' + namespace + '__item-wrapper--facebook{' + facebook_on + 'background:#3b5998}.' + namespace + '__item-wrapper--facebook .' + namespace + '__item{background:#30497c}.' + namespace + '__item-wrapper--twitter{' + twitter_on + 'background:#1da1f2}.' + namespace + '__item-wrapper--twitter .' + namespace + '__item{background:#0d8ddc}.' + namespace + '__item-wrapper--linkedin{' + linkedin_on + 'background:#0077b5}.' + namespace + '__item-wrapper--linkedin .' + namespace + '__item{background:#005e8f}.' + namespace + '__item-wrapper--pinterest{' + pinterest_on + 'background:#bd081c}.' + namespace + '__item-wrapper--pinterest .' + namespace + '__item{background:#980617}.' + namespace + '__item-wrapper:hover .' + namespace + '__item{min-width:100%;-webkit-transition:.2s;transition:.2s}.' + namespace + '__item{color:#fff;font-size:24px;min-width:' + min_width + ';text-align:center;height:48px;line-height:45px;display:inline-block;background:rgba(0,0,0,.15);-webkit-transition:.2s;transition:.2s;position:absolute}.' + namespace + '__count{color:#fff;font-size:19px;text-decoration:none;float:right;padding:0 16px;line-height:48px}@media (max-width:580px){.' + namespace + '__item{width:100%}.' + namespace + '__count{display:none}}</style>');
 
     // replace .social-sharing
     $('.' + namespace).replaceWith('<div class="' + namespace + '__wrapper"> <div class="' + namespace + '"> <div class="' + namespace + '__inner"><a class="' + namespace + '__item-wrapper ' + namespace + '__item-wrapper--facebook" href="#"> <div class="' + namespace + '__item"> <div class="fa fa-facebook"></div></div></a><a class="' + namespace + '__item-wrapper ' + namespace + '__item-wrapper--twitter" href="#"> <div class="' + namespace + '__item"> <div class="fa fa-twitter"></div></div></a><a class="' + namespace + '__item-wrapper ' + namespace + '__item-wrapper--linkedin" href="#"> <div class="' + namespace + '__item"> <div class="fa fa-linkedin"></div></div></a><a class="' + namespace + '__item-wrapper ' + namespace + '__item-wrapper--pinterest" href="#"> <div class="' + namespace + '__item"> <div class="fa fa-pinterest"></div></div></a></div></div></div>');

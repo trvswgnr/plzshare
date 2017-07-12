@@ -53,7 +53,8 @@ An example of some alternative init options:
   image: 'http://lorempixel.com/200/200',
   counters: false,
   margin: 10,
-  namespace: 'share-btns'
+  namespace: 'share-btns',
+  rounded: true
 }
 ```
 
@@ -83,6 +84,10 @@ Specifies a margin in pixels above and below the element.
 #### namespace : `String`
 
 Creates a custom namespace. Default is `social-sharing`. Useful if there are conflicts with existing stylesheets.
+
+#### rounded : `true|false`
+
+A boolean specifying whether or not to round the corners. Defaults to `false`.
 
 ## License
 
