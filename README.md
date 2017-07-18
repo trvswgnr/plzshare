@@ -2,6 +2,10 @@
 
 **TAW Social Sharing** is a simple, clean, and easy-to-use social sharing jQuery plugin.
 
+## Demo
+
+[View Demo](https://codepen.io/trvswgnr/live/2a60000f245e63df73d3b4d0391bfb14)
+
 ## Getting Started
 
 1. Download the package or install it with npm:
