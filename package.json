@@ -1,6 +1,6 @@
 {
   "name": "taw-social-sharing",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A simple jQuery plugin for displaying social media share buttons with counters.",
   "main": "taw_social_sharing.js",
   "repository": {
