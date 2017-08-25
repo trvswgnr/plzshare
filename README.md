@@ -4,7 +4,7 @@
 
 ## Getting Started
 
-1. Download the package or install it with npm:
+1. Download the minified js file (dist/taw_social_sharing.min.js) OR download the package or install it with npm:
     
     ```bash
     $ npm install taw-social-sharing
