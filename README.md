@@ -1,4 +1,4 @@
-# TAW Social Sharing - Easy, clean social sharing buttons with optional share counters.
+# plzshare - Easy, clean social sharing buttons with optional share counters.
 
 **TAW Social Sharing** is a simple, clean, and easy-to-use social sharing jQuery plugin.
 
